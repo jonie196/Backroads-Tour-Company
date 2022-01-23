@@ -299,7 +299,7 @@ Hero
   letter-spacing: var(--spacing);
 }
 .hero-btn {
-  pad: 0.9rem 1.6rem;
+  padding: 0.9rem 1.6rem;
   font-size: 1.25rem;
   background: var(--clr-white);
   color: var(--clr-primary-5);
@@ -442,6 +442,7 @@ Featured Tours
 }
 .tour-img {
   height: 15rem;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 .tour-date {
@@ -534,6 +535,18 @@ Contact
   text-transform: capitalize;
   border: transparent;
 }
+.form-control::-webkit-input-placeholder {
+  color: inherit;
+}
+.form-control::-moz-placeholder {
+  color: inherit;
+}
+.form-control:-ms-input-placeholder {
+  color: inherit;
+}
+.form-control::-ms-input-placeholder {
+  color: inherit;
+}
 .form-control::placeholder {
   color: inherit;
 }
@@ -560,7 +573,14 @@ Contact
     padding: 0rem 2rem;
   }
 }
-
+@media screen and (max-width: 315px) {
+  .contact-form {
+    display: block;
+  }
+  .btn-submit {
+    margin: 0;
+  }
+}
 /*
 =============== 
 Gallery
@@ -583,6 +603,7 @@ Gallery
 }
 .gallery-img {
   height: 17rem;
+  -o-object-fit: cover;
   object-fit: cover;
   transition: var(--transition);
 }
